@@ -5,6 +5,8 @@
          margin: 0;
          padding: 0;
          background-color: black;
+         display: flex;
+         flex-direction: column;
       }
       .links {
          width: 50vw;
@@ -50,11 +52,37 @@
       .github-link svg:hover, .github-link svg:active {
          transform: scale(1.25);
       }
+      #social-icons {
+         display: flex;
+         padding: 1em;
+         justify-content: space-around;
+      }
+      #social-icons img {
+         width: 10vw;
+         max-width: 4.5em;
+      }
    </style>
 </head>
 <body ontouchstart="">
+<div id="social-icons">
+   <a href="https://www.tiktok.com/@lucaesnhomoroni" target="_blank">
+      <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/tiktok.svg" />
+   </a>
+   <a href="https://www.instagram.com/esnhoesnho/" target="_blank">
+      <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/instagram.svg" />
+   </a>
+   <a href="https://www.youtube.com/channel/UCJPu-SUeRkoSRwBuQeT6_Ag" target="_blank">
+      <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/youtube.svg" />
+   </a>
+   <a href="https://github.com/esnho" target="_blank">
+      <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/github.svg" />
+   </a>
+</div>
 <div style="display: flex;
-flex-wrap: wrap;">
+flex-wrap: wrap;
+max-height: 90%;
+overflow: auto;
+flex-grow: 0;">
    <div class="links">
       <a href="https://github.com/esnho/the_clock_divider" target="_blank">
          <img src="https://raw.githubusercontent.com/esnho/the_clock_divider/master/current-status.jpg" />
