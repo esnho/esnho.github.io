@@ -9,6 +9,54 @@
          flex-direction: column;
          overflow: hidden;
       }
+      .links div h1 {
+         pointer-events: none;
+         width: 100%;
+         color: white;
+         text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
+      }
+      .github-link svg:hover, .github-link svg:active {
+         transform: scale(1.25);
+      }
+      #social-icons {
+         display: flex;
+         padding: 1em;
+         justify-content: space-around;
+      }
+
+      #link-container {
+         display: flex;
+         flex-wrap: wrap;
+         max-height: 90%;
+         overflow: auto;
+         flex-grow: 0;
+      }
+
+
+      .links {
+         overflow: hidden;
+      }
+      .links img:active, .links img:hover {
+         opacity: 0.6;
+         background-color: rgba(188, 188, 188, 0.4);
+      }
+      .links div {
+         position: relative;
+         float: left;
+         height: 100%;
+         width: 100%;
+         text-align: center;
+         align-items: center;
+         display: flex;
+         flex-direction: row;
+         pointer-events: none;
+      }
+
+      #social-icons img {
+         width: 10vw;
+         max-width: 4.5em;
+      }
+
       .links {
          width: 50vw;
          height: 50vw;
@@ -16,6 +64,7 @@
          max-height: 50vw;
          overflow: hidden;
       }
+
       .links img {
          min-width: 55vw;
          min-height: 55vw;
@@ -44,23 +93,45 @@
          flex-direction: row;
          pointer-events: none;
       }
-      .links div h1 {
-         pointer-events: none;
-         width: 100%;
-         color: white;
-         text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
-      }
-      .github-link svg:hover, .github-link svg:active {
-         transform: scale(1.25);
-      }
-      #social-icons {
-         display: flex;
-         padding: 1em;
-         justify-content: space-around;
-      }
-      #social-icons img {
-         width: 10vw;
-         max-width: 4.5em;
+      
+      @media screen 
+      and (min-width: 730px)
+      and (min-device-width: 1200px)
+      and (-webkit-min-device-pixel-ratio: 1),
+      not all and (orientation: portrait)  {
+
+         #social-icons img {
+            width: 5vw;
+            max-width: 2.5em;
+         }
+         
+         .links {
+            width: 25vw;
+            height: 25vw;
+            max-width: 25vw;
+            max-height: 25vw;
+         }
+         h1 {
+            font-size: 1.2em;
+         }
+         
+         .links img {
+            min-width: 30vw;
+            min-height: 30vw;
+            max-height: 30vw;
+            margin-left: -5vw;
+            margin-top: -5vw;
+         }
+         .links img:active, .links img:hover {
+            min-width: 35vw;
+            min-height: 35vw;
+            max-height: 35vw;
+            margin-left: -7.5vw;
+            margin-top: -7.5vw;
+         }
+         .links div {
+            top: -25vw;
+         }
       }
    </style>
 </head>
@@ -79,11 +150,7 @@
       <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/github.svg" />
    </a>
 </div>
-<div style="display: flex;
-flex-wrap: wrap;
-max-height: 90%;
-overflow: auto;
-flex-grow: 0;">
+<div id="link-container">
    <div class="links">
       <a href="https://github.com/esnho/the_clock_divider" target="_blank">
          <img src="https://raw.githubusercontent.com/esnho/the_clock_divider/master/current-status.jpg" />
