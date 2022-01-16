@@ -7,7 +7,7 @@
          background-color: black;
          display: flex;
          flex-direction: column;
-         overflow: hidden;
+         /* overflow: hidden; */
       }
       .links div h1 {
          pointer-events: none;
@@ -22,14 +22,19 @@
          display: flex;
          padding: 1em;
          justify-content: space-around;
+         position: fixed;
+         width: 100%;
+         background-color: black;
+         z-index: 100;
       }
 
       #link-container {
          display: flex;
          flex-wrap: wrap;
-         max-height: 90%;
+         /* max-height: 90%; */
          overflow: auto;
          flex-grow: 0;
+         margin-top: 6.5em;
       }
 
 
@@ -99,6 +104,10 @@
       and (min-device-width: 1200px)
       and (-webkit-min-device-pixel-ratio: 1),
       not all and (orientation: portrait)  {
+
+         #link-container {
+            margin-top: 4.5em;
+         }
 
          #social-icons img {
             width: 5vw;
