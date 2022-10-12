@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Luca Moroni - From Ramps To Image</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+     <!-- Facebook Meta Tags -->
+     <meta property="og:url" content="https://esnho.github.io/from-ramps-to/">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Luca Moroni - From Ramps To">
+     <meta property="og:description" content="Diary of an NFT journey">
+     <meta property="og:image" content="https://esnho.github.io/from-ramps-to/esempio3.jpeg">
+  
+     <!-- Twitter Meta Tags -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta property="twitter:domain" content="esnho.github.io">
+     <meta property="twitter:url" content="https://esnho.github.io/from-ramps-to/">
+     <meta name="twitter:title" content="Luca Moroni - From Ramps To">
+     <meta name="twitter:description" content="Diary of an NFT journey">
+     <meta name="twitter:image" content="https://esnho.github.io/from-ramps-to/esempio3.jpeg">
+  
+
+  <style>
+    body {
+       padding: 1em;
+       margin: 0;
+       background-color: rgb(64, 52, 68);
+       display: flex;
+       flex-direction: column;
+       color: #eeeeee;
+       font-size: 1.3em;
+       font-family: serif;
+       /* overflow: hidden; */
+    }
+
+    h1 {
+      text-shadow: 2px 2px 15px #000000;
+      margin: .65em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin: 0 1em 2em 1em;
+      text-shadow: 2px 2px 15px #000000;
+    }
+
+    a {
+      color: rgb(248, 120, 205);
+      text-shadow: 2px 2px 2px #000000;
+    }
+
+    a:visited {
+      color: deeppink;
+      text-shadow: 2px 2px 2px #000000;
+    }
+
+    a {
+      word-break: break-all;
+    }
+
+    iframe {
+      width: 50vw;
+    }
+
+    img {
+      box-shadow: 0 0 24px #333333;
+    }
+
+    #content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #content p {
+      width: 50vw;
+      line-height: 1.5em;
+      text-shadow: 2px 2px 20px #000000;
+    }
+
+    .flex-container {
+      list-style: none;
+      margin: 1em;
+      max-height: 20em;
+      white-space: nowrap;
+      display: flex;
+      width: 50vw;
+      width: 50vw;
+      overflow-x: auto;
+      padding: 1em;
+    }
+
+    .flex-item {
+      background-color: #C5CAE9;
+      height: 18em;
+      flex: 0 0 18em;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flex-item:not(:last-of-type) {
+      margin-right: 12px;
+    }
+
+    .flex-item img {
+      max-height: 100%;
+    }
+
+    .code-sample {
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: flex-start;
+    }
+
+    .code-sample p {
+      margin: 0;
+      font-size: .9em;
+      text-align: center;
+    }
+
+    /* On screens that are 992px or less, set the background color to blue */
+    @media screen and (max-width: 992px) {
+      iframe {
+        width: 75vw;
+      }
+
+      #content p {
+        width: 75vw;
+      }
+
+      #content .flex-container {
+        width: 75vw;
+      }
+
+      .code-sample {
+        width: 75vw;
+      }
+    }
+
+    /* On screens that are 600px or less, set the background color to olive */
+    @media screen and (max-width: 600px) {
+      iframe {
+        width: 100vw;
+      }
+
+      #content p {
+        width: calc(100vw - 2em);
+      }
+
+      #content .flex-container {
+        width: calc(100vw - 2em);
+      }
+
+      .code-sample {
+        width: calc(100vw - 2em);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>From Ramps To Image</h1>
+    <h2>Diary of a generative NFT journey</h2>
+    <div class="code-sample">
+      <ul class="flex-container">
+        <li class="flex-item">
+          <img src="samples/esempio3.jpeg" />
+        </li>
+        <li class="flex-item">
+          <img src="samples/esempio.png" />
+        </li>
+        <li class="flex-item">
+          <img src="samples/esempio2.jpeg" />
+        </li>
+      </ul>
+      <p>Sample outputs from this project</p>
+      <p>The fxHash link</p>
+    </div>
+    <p>
+      Even if I've recently moved to analog ahesthetic, I’ve never lost interest in digital processes, when they are not fully abstract I use videos I generate with 3D tools as sources in my analog explorations, for example here in <a href="https://objkt.com/asset/hicetnunc/748885" target="_blank">Mani</a>.
+    </p>
+    <p>
+      I chose to use shader programming for this project because it allows you to work directly with pixels and use an approach much more similar to analog synthesis which is far from common procedural computer graphics.
+    </p>
+    <p>
+      I’ve started exploring the use of a specific analog approach to video synthesis: the ramps.
+    </p>
+    <p>
+      First, I created a shader capable of generating vertical and horizontal ramps. Ramps are a basic building block in analog video synthesis, they are sawtooth oscillators locked to the timing of the horizontal line or the timing of the frame.
+    </p>
+    <!-- immagini rampe -->
+    <ul class="flex-container">
+      <li class="flex-item">
+        <img src="samples/ramp.png" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/rampy.png" />
+      </li>
+    </ul>
+    <p>
+      I wanted to be able to play with these horizontal ramps altering the frequency of these ramps, this permits me to generate vertical and horizontal patterns, like a more classic video oscillator. 
+    </p>
+    <div class="code-sample">
+      <img src="samples/ramp-scale-code.png" />
+      <p>How to call the function</p>
+      <p>ramp( lock, scale )</p>
+    </div>
+    <!-- immagini rampe -->
+    <ul class="flex-container">
+      <li class="flex-item">
+        <img src="samples/ramp-scale.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale2.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale3.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale4.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale5.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale6.jpg" />
+      </li>
+    </ul>
+    <p>
+      At this point, these ramps can be scaled differently on each color channel, this allows for color patterns using a single ramp, you can see a vertical locked ramp with different colors in the first image below. <i>ramp(st.y, vec3(4.5, 8., 3.))</i>
+    </p>
+    <p>
+      The second image below shows two ramps (horizontal and vertical) added together. <i>ramp(st.y, vec3(4.5, 8., 3.)) + ramp(st.x, vec3(4.5, 8., 3.))</i>
+    </p>
+    <!-- immagini rampe -->
+    <ul class="flex-container">
+      <li class="flex-item">
+        <img src="samples/ramp-scale-rgb.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/ramp-scale-rgb-double.jpg" />
+      </li>
+    </ul>
+    <p>
+      At this point is interesting to play with the first parameter of the ramp function, for example is possible to pass <i>st.x * st.y</i>. (By the way, st is the normalized screen space)
+    </p>
+    <p>
+      Or other kind of altered locks. At this point I’ve decided to think at this first parameter as a “space” parameter, even if it’s single dimensioned. And I’ve created the first function that is directly controlled by fxHash random numbers.
+    </p>
+    <p>
+      This function returns an interpolated value between different altered spaces. It’s ugly but it does its job.
+    </p>
+    <p>
+      The first image is a sample of st.x * st.y space, the second is st.x + st.y, the third uses a texture space altered with a noise function, the fourth is an example of noise.
+    </p>
+    <!-- immagini rampe -->
+    <ul class="flex-container">
+      <li class="flex-item">
+        <img src="samples/stmult.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/stplus.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/stnoise.jpg" />
+      </li>
+      <li class="flex-item">
+        <img src="samples/noise.jpg" />
+      </li>
+    </ul>
+    <div class="code-sample">
+      <img src="samples/space-code.jpeg" />
+      <p>The space interpolator</p>
+    </div>
+    <p>
+      Now it's time to spend a week adjusting the logic that manage the random numbers, add more details like a noisy grain, randomly make light veins appear, dynamically adjust brightness and contrast and make their values interdependent, reduce color resolution by deliberately introducing some banding effect, and of course that's not possible nowadays produce an image without vignetting, every Camera Raw user knows.
+    </p>
+    <div class="code-sample">
+      <ul class="flex-container">
+        <li class="flex-item">
+          <img src="samples/step0.jpeg" />
+        </li>
+        <li class="flex-item">
+          <img src="samples/step1.jpeg" />
+        </li>
+        <li class="flex-item">
+          <img src="samples/step2.jpeg" />
+        </li>
+      </ul>
+      <p>Three steps of the output composition</p>
+      <p>The fxHash link</p>
+    </div>
+    <p>
+      <a href="../">&lt;-------------- HOME</a>
+    </p>
+  </div>
+</body>
+</html>
