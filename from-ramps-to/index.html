@@ -184,16 +184,16 @@
       <p>The fxHash link</p>
     </div>
     <p>
-      Even if I've recently moved to analog ahesthetic, I’ve never lost interest in digital processes, when they are not fully abstract I use videos I generate with 3D tools as sources in my analog explorations, for example here in <a href="https://objkt.com/asset/hicetnunc/748885" target="_blank">Mani</a>.
+      Even if I've recently moved to analog ahesthetic, I’ve never lost interest in digital processes, when I create not fully abstract pieces, I often generate sources with 3D tools for my analog explorations, for example here in <a href="https://objkt.com/asset/hicetnunc/748885" target="_blank">Mani</a>.
     </p>
     <p>
-      I chose to use shader programming for this project because it allows you to work directly with pixels and use an approach much more similar to analog synthesis which is far from common procedural computer graphics.
+      I chose to use shader programming for this project because it allows me to work directly with pixels and use an approach much more similar to analog synthesis, which is far from common procedures in computer graphics.
     </p>
     <p>
-      I’ve started exploring the use of a specific analog approach to video synthesis: the ramps.
+      Here I’ve explored the use of a specific analog approach to video synthesis: the ramps. And I've used the concept of modulation, which can be translated to: altering the outcome of a function through the output of another function.
     </p>
     <p>
-      First, I created a shader capable of generating vertical and horizontal ramps. Ramps are a basic building block in analog video synthesis, they are sawtooth oscillators locked to the timing of the horizontal line or the timing of the frame.
+      First, I created a shader capable of generating vertical and horizontal ramps. Ramps are basic building blocks in analog video synthesis; if you are familiar with audio synthesis is possible to see them as sawtooth oscillators locked to the timing of the horizontal line or the timing of the frame, with the same frequency of the clock they are locked to.
     </p>
     <!-- immagini rampe -->
     <ul class="flex-container">
@@ -205,7 +205,7 @@
       </li>
     </ul>
     <p>
-      I wanted to be able to play with these horizontal ramps altering the frequency of these ramps, this permits me to generate vertical and horizontal patterns, like a more classic video oscillator. 
+      I wanted to be able to play with these horizontal ramps altering their frequeny, this permits me to generate vertical and horizontal patterns, like a classic video oscillator. 
     </p>
     <div class="code-sample">
       <img src="samples/ramp-scale-code.png" />
@@ -234,7 +234,7 @@
       </li>
     </ul>
     <p>
-      At this point, these ramps can be scaled differently on each color channel, this allows for color patterns using a single ramp, you can see a vertical locked ramp with different colors in the first image below. <i>ramp(st.y, vec3(4.5, 8., 3.))</i>
+      At this point, these ramps can be scaled differently on each color channel (read they can have a different frequency on each color channel), this allows me to create color patterns using a single ramp, below you can see a vertical locked ramp with different colors in the first image. <i>ramp(st.y, vec3(4.5, 8., 3.))</i>
     </p>
     <p>
       The second image below shows two ramps (horizontal and vertical) added together. <i>ramp(st.y, vec3(4.5, 8., 3.)) + ramp(st.x, vec3(4.5, 8., 3.))</i>
