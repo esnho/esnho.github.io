@@ -46,6 +46,12 @@
       text-shadow: 2px 2px 15px #000000;
     }
 
+    h3 {
+      font-size: 1em;
+      margin: 0.6em 0.8em -0.7em 0.8em;
+      text-align: left;
+    }
+
     a {
       color: rgb(248, 120, 205);
       text-shadow: 2px 2px 2px #000000;
@@ -77,15 +83,26 @@
       align-items: center;
     }
 
-    #content p {
+    .images-with-comments {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #content p, .images-with-comments p  {
       width: 50vw;
       line-height: 1.5em;
       text-shadow: 2px 2px 20px #000000;
     }
 
+    .images-with-comments p {
+      margin: 0;
+      font-size: .85em;
+    }
+
     .flex-container {
       list-style: none;
-      margin: 1em;
+      margin: 0;
       max-height: 20em;
       white-space: nowrap;
       display: flex;
@@ -131,7 +148,7 @@
         width: 75vw;
       }
 
-      #content p {
+      #content p, #content p, .images-with-comments p {
         width: 75vw;
       }
 
@@ -150,7 +167,7 @@
         width: 100vw;
       }
 
-      #content p {
+      #content p, #content p, .images-with-comments p {
         width: calc(100vw - 2em);
       }
 
@@ -168,7 +185,7 @@
   <div id="content">
     <h1>From Ramps To Image</h1>
     <h2>Diary of a generative NFT journey</h2>
-    <div class="code-sample">
+    <div class="images-with-comments">
       <ul class="flex-container">
         <li class="flex-item">
           <img src="samples/esempio3.jpeg" />
@@ -280,9 +297,39 @@
       <p>The space interpolator</p>
     </div>
     <p>
-      Now it's time to spend a week adjusting the logic that manage the random numbers, add more details like a noisy grain, randomly make light veins appear, dynamically adjust brightness and contrast and make their values interdependent, reduce color resolution by deliberately introducing some banding effect, and of course that's not possible nowadays produce an image without vignetting, every Camera Raw user knows.
+      Now it's time to spend a week adjusting the logic that manage parameter's random numbers, add more details like a noisy grain, randomly make light veins appear, dynamically adjust brightness and contrast and make their values interdependent, reduce color resolution by deliberately introducing some banding effect, and of course that's not possible nowadays produce an image without vignetting, every Camera Raw user knows.
     </p>
-    <div class="code-sample">
+    <p>
+      The parameters controlled by randomness are:
+    <p>
+    <h3>Space Interpolator Vector</h3>
+    <p>
+      These are two values, the first influences the outcomes of the second, and controls two spaces used as input for two ramps, these two values decide part of the outcome general aspect influencing the “waves”.
+    </p>
+    <h3>ST Offset Vector</h3>
+    <p>
+      This couple of values offsets the outcomes of above ramps, in fact it affects how many waves are present in the pictures.
+    </p>
+    <h3>Noise Multiplier</h3>
+    <p>
+      This parameter can introduce movement in ramps results.
+    </p>
+    <h3>Contrast</h3>
+    <p>
+      It decides how much contrast the picture got, there’s a 33% chance that the contrast is heavily negative and produces images with black background and only saturated RGB colors.
+    </p>
+    <p>
+      This value also affects the Exposure value range.
+    </p>
+    <h3>Exposure</h3>
+    <p>
+      Not so much to say, this value controls the general picture exposure.
+    </p>
+    <h3>Variation</h3>
+    <p>
+      If true this parameter enables the “light veins” which are generated with an highly contrasted noise field.
+    </p>
+    <div class="images-with-comments">
       <ul class="flex-container">
         <li class="flex-item">
           <img src="samples/step0.jpeg" />
