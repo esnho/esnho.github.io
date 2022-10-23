@@ -6,11 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: genietim/ftp-action@releases/v4
+    - name: test
+      run: echo ${{ secrets.FTP_SERVER }}
+    - name: ftp-upload-action
+      uses: sebastianpopp/ftp-action@v2.0.0
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        options: -p 21
         localDir: "/"
-        remoteDir: "/"
