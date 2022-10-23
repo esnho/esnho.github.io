@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: ftp-upload-action
-      uses: GenieTim/ftp-action@v4.0.1
+      uses: sebastianpopp/ftp-action
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
