@@ -6,4 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: echo "CIAO"
+    - name: Upload ftp
+      uses: genietim/ftp-action@releases/v4
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "/"
+        remoteDir: "/"
