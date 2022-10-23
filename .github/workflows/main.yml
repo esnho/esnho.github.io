@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test
-      run: echo secrets.FTP_SERVER
+      run: echo ${{ secrets.FTP_SERVER }}
     - name: ftp-upload-action
       uses: sebastianpopp/ftp-action@v2.0.0
       with:
