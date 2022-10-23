@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: ftp-upload-action
-      uses: sebastianpopp/ftp-action
+      uses: sebastianpopp/ftp-action@2
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
