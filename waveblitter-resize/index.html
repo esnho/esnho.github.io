@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='main.js'></script>
+  <style>
+    .button {
+      margin: .5em;
+      padding: 1em;
+      border: 1px solid black;
+      box-shadow: 3px 3px 3px gray;
+    }
+
+    #imageLoader {
+      display: none;
+    }
+
+    .options {
+      margin: 0.5em;
+      padding: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 1px solid gray;
+    }
+    .options div {
+      padding: .5em;
+      border: 1px solid gray;
+      background-color: gainsboro;
+      box-shadow: 3px 3px 3px gray;
+    }
+    .options div.selected {
+      background-color: orange;
+    }
+
+    #visualisers {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    #output {
+      box-shadow: 0 0 10px black;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="imageLoader" name="imageLoader"/>
+  <div id="upload" class="button">UPLOAD IMAGE</div>
+  <div id="resolution" class="options">
+    <div id="x144" class="selected" value="160,144">160 x 144 px</div>
+    <div id="x76" value="300,76">300 x 76 px</div>
+  </div>
+  <div id="drawMode" class="options">
+    <div id="fill" value="fill" class="selected">FILL</div>
+    <div id="contain" value="contain">CONTAIN</div>
+    <div id="cover" value="cover">COVER</div>
+  </div>
+  <div id="backgroundColor" class="options">
+    <div id="black" value="black" class="selected">BLACK BG</div>
+    <div id="white" value="white">WHITE BG</div>
+    <div id="gray" value="gray">GRAY BG</div>
+  </div>
+  <div id="convert" class="button">CONVERT</div>
+  <div class="button">
+    <label for="downloadName">Download Name</label>
+    <input id="downloadName" />
+  </div>
+  <div id="download" class="button">DOWNLOAD</div>
+  <div id="visualisers">
+    <canvas id="output" ></canvas>
+    <img id="preview" />
+  </div>
+</body>
+</html>
