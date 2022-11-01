@@ -7,11 +7,19 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src='main.js'></script>
   <style>
+    body {
+      background-color: black;
+    }
     .button {
       margin: .5em;
       padding: 1em;
       border: 1px solid black;
-      box-shadow: 3px 3px 3px gray;
+      box-shadow: 3px 3px 3px lightgray;
+      cursor: pointer;
+      background-color: white;
+    }
+    .button:hover {
+      background-color: lightgray;
     }
 
     #imageLoader {
@@ -27,15 +35,23 @@
       align-items: center;
       flex-wrap: wrap;
       border: 1px solid gray;
+      background-color: lightgray;
     }
     .options div {
       padding: .5em;
       border: 1px solid gray;
-      background-color: gainsboro;
+      background-color: rgb(251, 251, 251);
       box-shadow: 3px 3px 3px gray;
+      cursor: pointer;
+    }
+    .options div:hover {
+      background-color: rgb(233, 233, 233);
     }
     .options div.selected {
       background-color: orange;
+    }
+    .options div.selected:hover {
+      background-color: rgb(255, 185, 55);
     }
 
     #visualisers {
@@ -58,9 +74,9 @@
     <div id="x76" value="300,76">300 x 76 px</div>
   </div>
   <div id="drawMode" class="options">
-    <div id="fill" value="fill" class="selected">FILL</div>
+    <div id="fill" value="fill">FILL</div>
     <div id="contain" value="contain">CONTAIN</div>
-    <div id="cover" value="cover">COVER</div>
+    <div id="cover" value="cover" class="selected">COVER</div>
   </div>
   <div id="backgroundColor" class="options">
     <div id="black" value="black" class="selected">BLACK BG</div>
@@ -68,7 +84,7 @@
     <div id="gray" value="gray">GRAY BG</div>
   </div>
   <div id="convert" class="button">CONVERT</div>
-  <div class="button">
+  <div class="options">
     <label for="downloadName">Download Name</label>
     <input id="downloadName" />
   </div>
